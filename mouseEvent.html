@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Mouse Event</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl"
+      crossorigin="anonymous"
+    />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  </head>
+
+  <body class="container">
+    <main class="row p-1 mx-auto bg-secondary">
+      <div id="box" class="col-sm-3 p-1 my-3 mx-auto bg-secondary text-light">
+        <p>
+          Lorem Ipsum is simply dummy text of the printing and typesetting
+          industry. Lorem Ipsum has been the industry's standard dummy text ever
+          since the 1500s, when an unknown printer took a galley of type and
+          scrambled it to make a type specimen book. It has survived not only
+          five centuries, but also the leap into electronic typesetting,
+        </p>
+      </div>
+    </main>
+    <script>
+      //Click Event-------------------
+      $(document).ready(function () {
+        $("#box").click(function () {
+          $(this).addClass("bg-warning");
+          $(this).removeClass("bg-info");
+          $(this).removeClass("bg-dark");
+          $(this).remove("bg-secondary");
+          $(this).removeClass("bg-success");
+        });
+        //Double Click Event-------------------
+        $("#box").dblclick(function () {
+          $(this).addClass("bg-info");
+          $(this).removeClass("bg-warning");
+          $(this).removeClass("bg-dark");
+          $(this).remove("bg-secondary");
+          $(this).removeClass("bg-success");
+        });
+        $("#box").contextmenu(function () {
+          $(this).removeClass("bg-info");
+          $(this).removeClass("bg-warning");
+          $(this).addClass("bg-dark");
+          $(this).remove("bg-secondary");
+          $(this).removeClass("bg-success");
+        });
+        $("#box").mouseenter(function () {
+          $(this).removeClass("bg-info");
+          $(this).removeClass("bg-warning");
+          $(this).removeClass("bg-dark");
+          $(this).addClass("bg-success");
+          $(this).remove("bg-secondary");
+        });
+        $("#box").mouseleave(function () {
+          $(this).removeClass("bg-info");
+          $(this).removeClass("bg-warning");
+          $(this).removeClass("bg-dark");
+          $(this).removeClass("bg-success");
+          $(this).addClass("bg-secondary");
+        });
+      });
+    </script>
+  </body>
+</html>

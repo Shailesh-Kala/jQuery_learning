@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Form Event</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl"
+      crossorigin="anonymous"
+    />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script>
+      $(document).ready(function () {
+        //Focus(focusin) event------------
+        $("#name").focusin(function () {
+          $(this).css("background-color", "skyblue");
+        });
+        //blur(focusout)  event----------
+        $("#name").focusout(function () {
+          $(this).css("background-color", "blue");
+        });
+        //Select event----------------
+        $("#name, #number").select(function () {
+          $(this).css("background-color", "orange");
+        });
+
+        $("#number").focusin(function () {
+          $(this).css("background-color", "skyblue");
+        });
+        //blur(focusout)  event----------
+        $("#number").focusout(function () {
+          $(this).css("background-color", "blue");
+        });
+        // //Select event----------------
+        // $("#number").select(function () {
+        //   $(this).css("background-color", "orange");
+        // });
+
+        $("#submit-form").submit(function () {
+          let name = $("#name").val();
+          let number = $("#number").val();
+          console.log(`Name: ${name}
+  Phone Number: ${number}`);
+
+          alert("Your form is submitted");
+        });
+      });
+    </script>
+  </head>
+  <body>
+    <form action="" id="submit-form">
+      <div class="mb-3">
+        <label class="form-label">User Name</label>
+        <input type="text" class="form-control" id="name" />
+      </div>
+      <div class="mb-3">
+        <label class="form-label">Phone Number</label>
+        <input type="number" class="form-control" id="number" />
+      </div>
+
+      <button type="submit" class="btn btn-primary">Submit</button>
+    </form>
+  </body>
+</html>

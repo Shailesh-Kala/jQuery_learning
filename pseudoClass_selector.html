@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Selectors</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl"
+      crossorigin="anonymous"
+    />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+    <script>
+      $(document).ready(function () {
+        // $("div:lt(2)").css("border", "2px solid red"); // It will select 1-2 rang div
+        // $("div:first").css("border", "2px solid red"); // select first div
+        $("div:last").css("border", "2px solid red"); //select last div
+      });
+    </script>
+  </head>
+  <body class="container">
+    <main class="row p-1 mx-auto bg-secondary">
+      <div class="first_div col-sm-3 p-2 m-3 bg-info">
+        <h3>head 1</h3>
+        Lorem Ipsum is simply dummy text of the printing and typesetting
+        industry. Lorem Ipsum has been the industry's standard dummy text ever
+        since the 1500s, when an unknown printer took a galley of type and
+        scrambled it to make a type speci men book. It has survived not only
+        five centuries, but also the leap into electronic typesetting,
+      </div>
+      <div class="second_div col-sm-3 p-2 m-3 bg-success">
+        <h3>head 2</h3>
+        Lorem Ipsum is simply dummy text of the printing and typesetting
+        industry. Lorem Ipsum has been the industry's standard dummy text ever
+        since the 1500s, when an unknown printer took a galley of type and
+        scrambled it to make a type specimen book. It has survived not only five
+        centuries, but also the leap into electronic typesetting,
+      </div>
+      <div class="third_div col-sm-3 p-2 m-3 bg-primary">
+        <h3>head 3</h3>
+        Lorem Ipsum is simply dummy text of the printing and typesetting
+        industry. Lorem Ipsum has been the industry's standard dummy text ever
+        since the 1500s, when an unknown printer took a galley of type and
+        scrambled it to make a type specimen book. It has survived not only five
+        centuries, but also the leap into electronic typesetting,
+      </div>
+    </main>
+  </body>
+</html>
